@@ -2,6 +2,8 @@
 
 [![tests](https://github.com/basovdanil/churn-baseline/actions/workflows/tests.yml/badge.svg)](https://github.com/basovdanil/churn-baseline/actions/workflows/tests.yml)
 
+**[English](README.en.md)** · [Русский](README.md)
+
 Предсказание оттока на Telco Customer Churn: кросс-валидация трёх моделей, подбор порога по
 out-of-fold вероятностям, обучение, скоринг базы и проверка артефактов. Данные публичные, все цифры
 воспроизводятся одной командой с фиксированным `SEED = 42`.
