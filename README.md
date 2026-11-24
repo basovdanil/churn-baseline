@@ -173,3 +173,7 @@ python -m unittest discover -s tests
   удержания стоит дорого), порог надо пересчитать под стоимость ошибок, а не под F1.
 - `RandomForest` и бустинг используют `n_jobs=-1`; на слабой машине CV займёт заметно дольше,
   результат при этом не изменится.
+
+---
+
+Другие проекты: [github.com/basovdanil](https://github.com/basovdanil) · разборы с числами: [portfolio](https://basovdanil.github.io/portfolio/)

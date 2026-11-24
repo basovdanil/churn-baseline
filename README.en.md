@@ -42,3 +42,7 @@ python -m unittest discover -s tests
 
 Public Telco dataset (7 043 rows, verified by sha256). The model is a baseline, not a production
 scorer: no feature store, no monitoring.
+
+---
+
+More projects: [github.com/basovdanil](https://github.com/basovdanil) · write-ups: [portfolio](https://basovdanil.github.io/portfolio/)
