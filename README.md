@@ -27,11 +27,11 @@ data/Telco-Customer-Churn.csv ──▶ 21 признак ──▶ CV, 5 фол
 Нужен Python 3.9+ и `pandas` + `scikit-learn` (проверено на 3.11, pandas 2.2.3, scikit-learn 1.9.1).
 
 ```bash
-py -3 churn.py fetch                     # скачать датасет и сверить sha256
-py -3 churn.py train                     # CV трёх моделей, work/metrics.json + work/model.pkl
-py -3 churn.py predict --holdout 0.2     # проверка на отложенной выборке
-py -3 churn.py predict                   # скоринг всей базы сохранённой моделью
-py -3 churn.py check                     # проверить артефакты и согласованность
+python churn.py fetch                     # скачать датасет и сверить sha256
+python churn.py train                     # CV трёх моделей, work/metrics.json + work/model.pkl
+python churn.py predict --holdout 0.2     # проверка на отложенной выборке
+python churn.py predict                   # скоринг всей базы сохранённой моделью
+python churn.py check                     # проверить артефакты и согласованность
 ```
 
 Пути по умолчанию: `data/Telco-Customer-Churn.csv`, `work/model.pkl`, `work/metrics.json`,
@@ -99,7 +99,7 @@ sha256 `16320c9c…e3055e91`. Ушедших 1869 (26,54 %). Пропусков 
 20 % (1409 строк) отложены стратифицированно, обучение на остальных, порог из `metrics.json`:
 
 ```bash
-py -3 churn.py predict --holdout 0.2
+python churn.py predict --holdout 0.2
 rows=1409 flagged=508 thr=0.57 ACC=0.7630 AUC=0.8414
 ```
 
@@ -110,7 +110,7 @@ AUC совпадает с CV (0,8414 против 0,8446), accuracy 0,7630 — �
 ## Скоринг базы
 
 ```bash
-py -3 churn.py predict
+python churn.py predict
 rows=7043 flagged=2538 thr=0.57
 ```
 
@@ -121,7 +121,7 @@ rows=7043 flagged=2538 thr=0.57
 ## Проверка артефактов
 
 ```bash
-py -3 churn.py check
+python churn.py check
 CHECK features=OK
 CHECK no_target_leak=OK
 CHECK metrics=OK
@@ -137,7 +137,7 @@ CHECKED=6 FAILED=0
 нужные колонки; метки согласованы с вероятностями и порогом. Нет `scores.csv` — два FAIL и код 4.
 
 ```bash
-py -3 -m unittest discover -s tests
+python -m unittest discover -s tests
 ```
 
 19 тестов, около 24 секунд: признаки (`charges_per_month` из `TotalCharges`, фолбэк при нулевом
