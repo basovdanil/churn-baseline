@@ -1,5 +1,10 @@
 # churn-baseline
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/basovdanil/basovdanil/main/assets/tools.png"
+       alt="Eight tools with tests and exit codes" width="100%">
+</p>
+
 [![tests](https://github.com/basovdanil/churn-baseline/actions/workflows/tests.yml/badge.svg)](https://github.com/basovdanil/churn-baseline/actions/workflows/tests.yml)
 
 Churn prediction on an imbalanced dataset (26,5 % churn): stratified cross-validation of three
